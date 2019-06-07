@@ -1,3 +1,6 @@
+
+
+#For windows.In linux you dont have to type encoding="utf-8"
 import os
 import requests
 import json
@@ -25,18 +28,20 @@ print(final_data)
 file_data=open("e:/NewsOutput.txt" , "w",encoding="utf-8")
 file_data.write(request_data.text)
 text_data=open("e:/text.txt").read()
-article_textnews=text_data
+open("e:/article_textnews.txt", "w").write(text_data)
+article_textnews=open("e:/article_textnews.txt").read()
 articles=final_data["articles"]
 for article in articles:
-    
     if article["author"]:
-        article_textnews.replace("Author1234",article["author"])
+        article_textnews=article_textnews.replace("Author1234",article["author"])
     if article['title']:
-        article_textnews.replace("Title1234",article["title"])
+        article_textnews=article_textnews.replace("Title1234",article["title"])
     if article["content"]:
-        article_textnews.replace("Content1234",article["content"])
+        article_textnews=article_textnews.replace("Content1234",article["content"])
     article_textnews+=text_data
+    
 
-open("e:/article_textnews.txt",'r')
+open("e:/FinalOutput.txt","w",encoding="utf-8").write(article_textnews)
+
 
 
