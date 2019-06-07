@@ -1,6 +1,6 @@
 
 
-#For windows.In linux you dont have to type encoding="utf-8"
+#This code is for windows  .In linux you dont have to type encoding="utf-8"
 import os
 import requests
 import json
