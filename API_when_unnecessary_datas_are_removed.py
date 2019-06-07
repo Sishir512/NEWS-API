@@ -1,4 +1,4 @@
-""" When you run the API.py program you can se that you get unnecessary Author1234,Content1234 & Title1234 in the output.That problem is fixed by this code"""
+""" When you run the API.py program you can see that you get unnecessary Author1234,Content1234 & Title1234 in the output.That problem is fixed by this code"""
 
 import os
 import requests
