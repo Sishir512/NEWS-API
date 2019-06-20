@@ -35,17 +35,17 @@ def print_json():#Prints json data
     request_data_text = request_data.text
     final_data = json.loads(request_data_text)
     print(final_data)
-def open_file():
+def open_file(): #To create a text file(NewsOutput.txt) and write the json data in the file.
     global text_data
     file_data=open("e:/NewsOutput.txt" , "w",encoding="utf-8")
     file_data.write(request_data_text)
     text_data=open("e:/text.txt").read()
-    open("e:/article_textnews.txt", "w").write(text_data)
+    open("e:/article_textnews.txt", "w").write(text_data) #To create a text file (article_textnews.txt).In this file we store the contents of text.txt file so that not to change the contents of text.txt file and by doing so we can run the program again and again.
 def replacing():
     global article_textnews
     article_textnews=open("e:/article_textnews.txt").read()
     articles=final_data["articles"]
-    for article in articles:
+    for article in articles: #To replace the Title1234 , Content1234 , URL1234 & Author 1234 in the article_textnews.txt file by Title , Content , URL & Author respectively.
         if article["title"]:
             article_textnews=article_textnews.replace("Title1234","Title:::: "+article["title"])
         if article["content"]:
