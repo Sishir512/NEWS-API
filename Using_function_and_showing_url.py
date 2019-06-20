@@ -1,3 +1,4 @@
+#To make this program run currently add URL1234 in the text.txt file.
 import os
 import requests
 import json
