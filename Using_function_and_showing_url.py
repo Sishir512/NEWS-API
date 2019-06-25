@@ -40,7 +40,7 @@ def open_file(): #To create a text file(NewsOutput.txt) and write the json data 
     file_data=open("e:/NewsOutput.txt" , "w",encoding="utf-8")
     file_data.write(request_data_text)
     text_data=open("e:/text.txt").read()
-    open("e:/article_textnews.txt", "w").write(text_data) #To create a text file (article_textnews.txt).In this file we store the contents of text.txt file so that not to change the contents of text.txt file and by doing so we can run the program again and again.
+    open("e:/article_textnews.txt", "w").write(text_data) #To create a text file (article_textnews.txt).In this file we store the contents of text.txt file so as not to change the contents of text.txt file and by doing so we can run the program again and again.
 def replacing():
     global article_textnews
     article_textnews=open("e:/article_textnews.txt").read()
