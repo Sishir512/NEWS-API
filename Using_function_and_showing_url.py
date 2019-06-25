@@ -1,4 +1,4 @@
-#To make this program run corretly add URL1234 in the text.txt file.
+#To make this program run correctly add URL1234 in the text.txt file.
 import os
 import requests
 import json
